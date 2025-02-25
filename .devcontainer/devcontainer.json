@@ -1,5 +1,5 @@
 {
-	"name": "🦀 Rust, first steps 🐾",
+	"name": "🦀 Gaspi Project",
 
 	"dockerComposeFile": "compose.yml",
 	"service": "rust-workspace",

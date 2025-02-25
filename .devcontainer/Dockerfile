@@ -26,6 +26,10 @@ apt-get install -y clang lldb lld
 apt-get -y install hey
 ln -s /usr/bin/batcat /usr/bin/bat
 
+# Raspberry Pi
+# https://crates.io/crates/sysinfo
+apt-get install gcc-arm-linux-gnueabihf -y
+
 apt-get clean autoclean
 apt-get autoremove --yes
 rm -rf /var/lib/{apt,dpkg,cache,log}/
@@ -80,6 +84,10 @@ export PATH=$PATH:$CARGO_HOME/bin
 EOF
 
 ENV PATH="/home/${USER_NAME}/.cargo/bin:$PATH"
+
+RUN <<EOF
+rustup target add armv7-unknown-linux-gnueabihf
+EOF
 
 # ------------------------------------
 # Install OhMyBash
