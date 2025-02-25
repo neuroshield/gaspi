@@ -102,7 +102,9 @@ cargo run -- --duration 10
 
 **Monitor the device during am Ollama generate completion**:
 ```bash
-cargo run -- --llm-name qwen2.5:0.5b --ollama-url http://localhost:11434 --prompt "Who is Jean-Luc Picard?"
+cargo run -- --llm-name qwen2.5:0.5b \
+--ollama-url http://localhost:11434 \
+--prompt "Who is Jean-Luc Picard?"
 ```
 
 The power profile of the device is stored in the `.env` file. 
@@ -110,5 +112,9 @@ The power profile of the device is stored in the `.env` file.
 **Use an alternative `.env` file**:
 ```bash
 cargo run -- --env-file ./pi.env --duration 3
-cargo run -- --env-file ./pi.env --llm-name qwen2.5:3b --ollama-url http://localhost:11434 --prompt "Who is James T Kirk?"
+
+cargo run -- --env-file ./pi.env \
+--llm-name qwen2.5:3b \
+--ollama-url http://localhost:11434 \
+--prompt "Who is James T Kirk?"
 ```
