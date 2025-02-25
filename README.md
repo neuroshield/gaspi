@@ -11,7 +11,7 @@
 
 ### Goal
 
-The main objective of these programs is to measure and analyze the energy consumption of computing devices (specifically a Raspberry Pi 5) to understand their environmental impact. The tools provide real-time monitoring and calculate several key environmental metrics to quantify the ecological footprint of running specific software or workloads.
+The main objective of these programs is to measure (**estimate**) and analyze the energy consumption of computing devices (specifically a Raspberry Pi 5) to understand their environmental impact. The tools provide real-time monitoring and calculate several key environmental metrics to quantify the ecological footprint of running specific software or workloads.
 
 ### Specifications
 
