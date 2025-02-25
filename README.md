@@ -4,8 +4,8 @@
 ![gaspi hunting](chasse-au-gaspi.jpg)
 
 **TODO:**
-- Make a CLI with arguments
-- Create a release
+- [ ] Make a CLI with arguments
+- [ ] Create a release
 
 ## Energy Consumption and Environmental Impact Monitoring Tools
 
