@@ -90,3 +90,25 @@ This specialized method measures power consumption during a Large Language Model
 The second method is particularly valuable for measuring the environmental impact of using specific AI models, allowing for comparison between different models' efficiency and ecological footprint during inference tasks.
 
 > The tools enable users to make informed decisions about the environmental impact of their computing workloads and can help in optimizing software for better energy efficiency and reduced ecological footprint.
+
+## Run the GasPi
+
+With `cargo run`:
+
+**Monitor the device during 10 seconds, default is 5 seconds**:
+```bash
+cargo run -- --duration 10
+```
+
+**Monitor the device during am Ollama generate completion**:
+```bash
+cargo run -- --llm-name qwen2.5:0.5b --ollama-url http://localhost:11434 --prompt "Who is Jean-Luc Picard?"
+```
+
+The power profile of the device is stored in the `.env` file. 
+
+**Use an alternative `.env` file**:
+```bash
+cargo run -- --env-file ./pi.env --duration 3
+cargo run -- --env-file ./pi.env --llm-name qwen2.5:3b --ollama-url http://localhost:11434 --prompt "Who is James T Kirk?"
+```
