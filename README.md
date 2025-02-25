@@ -3,15 +3,19 @@
 
 ![gaspi hunting](chasse-au-gaspi.jpg)
 
-# Energy Consumption and Environmental Impact Monitoring Tools
+**TODO:**
+- Make a CLI with arguments
+- Create a release
 
-## Goal
+## Energy Consumption and Environmental Impact Monitoring Tools
+
+### Goal
 
 The main objective of these programs is to measure and analyze the energy consumption of computing devices (specifically a Raspberry Pi 5) to understand their environmental impact. The tools provide real-time monitoring and calculate several key environmental metrics to quantify the ecological footprint of running specific software or workloads.
 
-## Specifications
+### Specifications
 
-### Core Functionality
+#### Core Functionality
 
 1. **Energy Consumption Monitoring**
    - Real-time power usage estimation based on system metrics
@@ -30,15 +34,15 @@ The main objective of these programs is to measure and analyze the energy consum
    - CPU temperature (Raspberry Pi version)
    - Power consumption estimation based on hardware characteristics
 
-### Device-Specific Adaptations
+#### Device-Specific Adaptations
 
-#### Raspberry Pi 5
+##### Raspberry Pi 5
 - Adjusted for the Broadcom BCM2712 with four Arm Cortex-A76 cores
 - Incorporates CPU temperature as a significant factor
 - Base power consumption: 5W
 - Maximum power consumption: 15W
 
-#### [to come] MacBook Pro M2
+##### [to come] MacBook Pro M2
 - Considers the asymmetric architecture (performance vs. efficiency cores)
 - Calibrated for 32GB RAM configuration
 - Base power consumption: 7W
