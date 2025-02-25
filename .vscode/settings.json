@@ -9,7 +9,7 @@
     "editor.detectIndentation": true,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
-    "window.zoomLevel": 0.5,
+    "window.zoomLevel": 0.0,
     "[markdown]": {
         "editor.unicodeHighlight.ambiguousCharacters": false,
         "editor.unicodeHighlight.invisibleCharacters": false,
