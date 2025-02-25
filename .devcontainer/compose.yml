@@ -1,0 +1,17 @@
+services:
+
+  rust-workspace:
+    build:
+      context: .
+      platforms:
+        #- "linux/amd64"
+        - "linux/arm64"
+      dockerfile: Dockerfile
+      args:
+        - NODE_MAJOR=22
+        - USER_NAME=${USER}
+    network_mode: "host"   
+    volumes:
+      - ../..:/workspaces:cached      
+    command: sleep infinity
+

@@ -1,0 +1,43 @@
+{
+	"name": "🦀 Rust, first steps 🐾",
+
+	"dockerComposeFile": "compose.yml",
+	"service": "rust-workspace",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"features": {
+		"git": "latest"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"vallyscode.crayons",
+				"ms-azuretools.vscode-docker",
+				"golang.go",
+				"Tobermory.es6-string-html",
+				"tamasfe.even-better-toml",
+				"hediet.vscode-drawio",
+				"aaron-bond.better-comments",
+				"PKief.material-icon-theme",
+				"PKief.material-product-icons",
+				"wayou.vscode-todo-highlight",
+				"rust-lang.rust-analyzer",
+				"bytecodealliance.wit-idl",
+				"esbenp.prettier-vscode",
+				"irongeek.vscode-env"
+			]
+		}
+	},
+    "remoteEnv": {
+		//"OLLAMA_HOST": "http://host.docker.internal:11434"
+		//"OLLAMA_HOST": "http://ollama-service:11434"
+    },
+	"forwardPorts": [3000, 3001, 8080, 9090, 5173],
+   	"mounts": [
+        //"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached",
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/${localEnv:USER}/.ssh,type=bind,consistency=cached"
+    ],
+	"remoteUser": "${localEnv:USER}",
+	"postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
+
+}
